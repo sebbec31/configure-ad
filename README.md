@@ -56,7 +56,7 @@ Now go into DC-1 through the Azure portal > Networking > Network Interface: dc-x
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/55f7c7e7-ed72-43c1-8b34-d8eee338b3d7" height="80%" width="80%" alt="1"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Head over to "IP Configurations" and click "ipconfig1".
 </p>
 <br />
 
@@ -65,7 +65,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/52d74705-1786-4f9b-918c-fbfd39105b49" height="80%" width="80%" alt="2"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Change the IP from "Dynamic" to "Static" and click "Save".
 </p>
 <br />
 
@@ -74,7 +74,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/87bfbe3f-30e6-48ec-94e8-2e8b49508fd2" height="80%" width="80%" alt="3"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now, login into thhe "Client-1" VM and open the CommandPrompt. Try to ping the "DC-1" Private IP by typing in "ping -t". The request will be timed out, but be sure to keep this VM running as we will fix this in the next few steps.
 </p>
 <br />
 
@@ -83,7 +83,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/7eac0622-69b8-4736-8b6b-813a29b4e22a" height="80%" width="80%" alt="4"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Login into the "DC-1" VM and open "Windows Defender Firewall with Advanced Security"
 </p>
 <br />
 
@@ -92,7 +92,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/0d0e45ea-a55b-42d0-8372-a7ccfcd01cf2" height="80%" width="80%" alt="5"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+From here, go to inbound rules > Enable both "Core Networking Diagnostics". This will allow ICMPv4 traffic that ping uses.
 </p>
 <br />
 
@@ -101,7 +101,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/46b6097f-69a2-4ab6-99de-5ca73eadb88b" height="80%" width="80%" alt="6"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Head back to the "Client-1" VM and now there should be replies in the CommandPrompt. If this is happening go ahead and stop the pinging by pressing "CTRL + C" in the Command line.
 </p>
 <br />
 
@@ -110,7 +110,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/bcfb6d77-f036-48ff-81a3-37f5fd530a59" height="80%" width="80%" alt="7"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now we are going to install Active Director. Inside the "DC-1" VM go into "Server Manager" and click on "Add roles and features". Continue to click on "Next" until you reach "Server Roles", and once you do go ahead and check "Active Directory Domain Services". Finally, click "Add Features" then continue to click "Next" to install.
 </p>
 <br />
 
@@ -119,7 +119,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/56145dad-ed9e-45f1-8c34-21000b3cd6c8" height="80%" width="80%" alt="8/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In this step, we are going to promote the VM as a main controller. Click on the flag with the caution sign inside of "Server Manager" and click "Promote this server to a domain controller".
 </p>
 <br />
 
@@ -127,7 +127,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/fabdfaa5-040e-49a8-9497-eb1358951ba2" height="80%" width="80%" alt="9/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Go ahead and check "Add a new forest" and name it "mydomain.com" and click next.
 </p>
 <br />
 
@@ -135,7 +135,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/9432538a-d1ef-4c91-80e0-33179a62a3dc" height="80%" width="80%" alt="10"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create a "DSRM' password, although this password will not be used in this tutorial so do not worry about it too much. 
 </p>
 <br />
 
@@ -143,7 +143,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/27dba8e0-3ae9-41af-b054-e35e4e19a4f9" height="80%" width="80%" alt="11"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Once you create a password and continue the VM sign you out and restart.
 </p>
 <br />
 
@@ -151,7 +151,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/54421335-f21b-4be9-8c4c-3d118be743f6" height="80%" width="80%" alt="12"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+ Once the "DC-1" VM has restarted connect back into it with RDC. This time we will be using a different user from the new root domain we added. Type "mydomain.com\labuser" as the user and use the same password that you created with the VM.
+
 </p>
 <br />
 
@@ -159,7 +160,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/52cdd56f-5ab5-428e-bc58-dafb2cedc30f" height="80%" width="80%" alt="13"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now go to the windows search bar, type "Active Directory Users and Computers" and click it. 
 </p>
 <br />
 
