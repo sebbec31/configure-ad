@@ -116,7 +116,7 @@ Now we are going to install Active Director. Inside the "DC-1" VM go into "Serve
 
 
 <p>
-<img src="https://github.com/sebbec31/configure-ad/assets/125160491/56145dad-ed9e-45f1-8c34-21000b3cd6c8" height="80%" width="80%" alt="8/>
+<img src="https://github.com/sebbec31/configure-ad/assets/125160491/56145dad-ed9e-45f1-8c34-21000b3cd6c8" height="80%" width="80%" alt="8"/>
 </p>
 <p>
 In this step, we are going to promote the VM as a main controller. Click on the flag with the caution sign inside of "Server Manager" and click "Promote this server to a domain controller".
@@ -124,7 +124,7 @@ In this step, we are going to promote the VM as a main controller. Click on the 
 <br />
 
 <p>
-<img src="https://github.com/sebbec31/configure-ad/assets/125160491/fabdfaa5-040e-49a8-9497-eb1358951ba2" height="80%" width="80%" alt="9/>
+<img src="https://github.com/sebbec31/configure-ad/assets/125160491/fabdfaa5-040e-49a8-9497-eb1358951ba2" height="80%" width="80%" alt="9"/>
 </p>
 <p>
 Go ahead and check "Add a new forest" and name it "mydomain.com" and click next.
@@ -143,7 +143,7 @@ Create a "DSRM' password, although this password will not be used in this tutori
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/27dba8e0-3ae9-41af-b054-e35e4e19a4f9" height="80%" width="80%" alt="11"/>
 </p>
 <p>
-Once you create a password and continue the VM sign you out and restart.
+Once you create a password and continue, the VM sign you out and restart.
 </p>
 <br />
 
@@ -168,7 +168,7 @@ Now go to the windows search bar, type "Active Directory Users and Computers" an
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/7d9421c3-6ba6-4634-b6d1-6330a1e17cce" height="80%" width="80%" alt="14"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, create two new "Organizational Units" by right clicking "mydomain.com" > New > Organizational Unit. One unit will be "_EMPLOYEES" and the other will be "_ADMINS".
 </p>
 <br />
 
@@ -176,7 +176,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/59e90252-fc9b-4bca-966c-2a3d9c6aea71" height="80%" width="80%" alt="15"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Go ahead and refresh the page to make organize it. 
 </p>
 <br />
 
@@ -184,7 +184,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/9204b430-be71-4c1e-b2c3-431a073e9162" height="80%" width="80%" alt="16"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now we will create a new admin user by open the "_ADMINS" Unit > Clicking the button at the top with a person and star on it. Name the admin "Jane Doe" and the username "jane_admin". After clicking "Next" create a password, uncheck "User must change password at next login" and click next to create the admin. 
 </p>
 <br />
 
@@ -192,7 +192,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/29270441-2dc5-4357-8cf4-4fa521798295" height="80%" width="80%" alt="17"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After, add Jane Doe to the group "Domain Admins". To do this, right click on Jane > Properties > Member Of > Add > type "Domain" in the object box > Check Names > click "Domain Admins" > click Ok and then apply. 
 </p>
 <br />
 
@@ -200,7 +200,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/d4dc4485-b04c-4c6a-ab51-7dba65e3b5d6" height="80%" width="80%" alt="18"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Once this is done, go ahead and logout and log back into "DC-1" with jane_admin and use the password created when making jane_admin.
 </p>
 <br />
 
@@ -208,7 +208,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/d27de5f9-277a-4fa4-a732-a233afea2dec" height="80%" width="80%" alt="19"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Head back to the Azure portal, and go into "Client-1" and click on "Networking". Click on the "NIC" or where is has "dc-xxxx".
 </p>
 <br />
 
@@ -216,7 +216,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/ce59c5e0-89ff-4bde-a6a9-50b8aa8539c7" height="80%" width="80%" alt="20"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now click on "DNS servers" and on custom. From there add the private IP of DC-1 into the list and click save.
 </p>
 <br />
 
@@ -224,7 +224,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/3e530d67-b0c6-4780-a2da-2843913624a6" height="80%" width="80%" alt="21"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Once this is done, go back to the "Client-1" VM on Azure and restart the VM. After restarting, log back into the VM.
 </p>
 <br />
 
@@ -232,7 +232,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/890eee97-3931-4001-839e-72fc0f1ff432" height="80%" width="80%" alt="22"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next go to, Settings > About > Rename this PC(Advanced) > change domain > type mydomain.com > use mydomain.com\jane_admin > click "OK to make the changes apply. The VM will automatically restart, once it does just log back in as jane_admin.
 </p>
 <br />
 
@@ -240,7 +240,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/c7cfaa91-a563-45c2-92be-47446791d16f" height="80%" width="80%" alt="23"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Once you are logged back in, go to "Remote Desktop" in the settings > click "Select users that can remotely access this PC" > Add > type "domain users" > Check Names > click "OK". This will allow all domain users to connect to the VM.
 </p>
 <br />
 
@@ -248,7 +248,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/1777043b-5565-42d2-815c-3e5b8b7c7f61" height="80%" width="80%" alt="24"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now head back to DC-1 and in the windows search bar open "Windows Powershell ISE (x86)" as admin.
 </p>
 <br />
 
@@ -256,7 +256,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://github.com/sebbec31/configure-ad/assets/125160491/e91f4ded-7019-4792-a4bc-f94fc6a5dd1d" height="80%" width="80%" alt="25"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Finally, create 10,000 users with randomly generated name by using the scipt that is linked below. To use the script, copy the script form github, go back to powershell and create new script, paste the script, and hit the green play button. 
+ <ul>
+  <li><a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">Powershell Script</a></li>
+</ul>
+Now you can use any of the users that were generted to log back into "Client-1" with the defaulted password of "Password1".
 </p>
 <br />
 
